@@ -10,7 +10,7 @@ import javax.annotation.PostConstruct;
 
 @Component
 public class MarketDataServiceProvider {
-    MarketDataService marketDataService;
+    private MarketDataService marketDataService;
 
     @PostConstruct
     public void init(){
