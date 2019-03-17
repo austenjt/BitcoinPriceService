@@ -82,7 +82,6 @@ public class BitcoinChecker {
         LOG.info(ticker.getCurrencyPair() + " price: " + price);
         if (price.compareTo(BigDecimal.valueOf(alert.getLimit())) == 1) {
             LOG.info("sending " + alert.getPair().toString() + " limit: " + alert.getLimit() + " to user: " + principalName);
-
             template.convertAndSendToUser(principalName,
                     "/alerts",
                     alert.getPair().toString() + " limit: " + alert.getLimit() + " ts: " + getTimeStamp());
