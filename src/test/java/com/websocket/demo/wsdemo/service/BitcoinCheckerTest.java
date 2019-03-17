@@ -99,6 +99,12 @@ public class BitcoinCheckerTest {
                 convertAndSendToUser(any(String.class), any(String.class), any(String.class));
     }
 
+    @Test
+    public void destroyShouldRemovePrincipalAlertsFromClientAlertsInstance(){
+        bitcoinChecker.destroy();
+        verify(clientAlerts).removeAlerts(bitcoinChecker.getPrincipalName());
+    }
+
     private List<Alert> getTestAlerts() {
         List<Alert> alerts = new ArrayList<>();
         alerts.add(new Alert("BTC_USD", 2000));

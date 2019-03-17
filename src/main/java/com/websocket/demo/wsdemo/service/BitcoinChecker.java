@@ -32,7 +32,6 @@ public class BitcoinChecker {
     private SimpMessagingTemplate template;
 
     private String principalName = "";
-    private String timeStamp;
 
 
     @Autowired
