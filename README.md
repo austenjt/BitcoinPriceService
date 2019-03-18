@@ -1,12 +1,11 @@
 # BitcoinPriceService
 
-#### To build BitcoinPriceService run:
-
+#### To build BitcoinPriceService type:
 
 ```
 mvn clean package|install
 ```
-#### To run BitcoinPriceService server run (from target directory):
+#### To run BitcoinPriceService server type (from target directory):
 ```
 java -jar bitcoin-price-service-0.0.1-SNAPSHOT.jar
 ```
