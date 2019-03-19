@@ -24,4 +24,4 @@ In test mode, internet connection is not needed for server to get current prices
 
 
 ##### ``BitcoinServiceClient``
-This class is the simple CLI implementation of the server client. It enables the user to set any number of price alerts for different currency pairs, as well as remove them. Instruction with examples are printed after client start.
+Project contain ``BitcoinServiceClient`` class which is the simple CLI implementation of the server client. It enables the user to set any number of price alerts for different currency pairs, as well as remove them. Instruction with examples are printed after client start.
