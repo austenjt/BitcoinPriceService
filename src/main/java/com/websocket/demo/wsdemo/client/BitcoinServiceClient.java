@@ -14,36 +14,41 @@ import java.util.*;
 public class BitcoinServiceClient {
 
     private static final Logger LOG = LoggerFactory.getLogger(BitcoinServiceClient.class);
+
     public static void main(String[] args) {
         String hostnameAndPort;
         String localhost8080 = "localhost:8080";
-        if (args.length == 0){
+        if (args.length == 0) {
             LOG.info("No hostname:port provided to the client. Using " + localhost8080);
             hostnameAndPort = localhost8080;
-        }else{
+        } else {
             hostnameAndPort = args[0];
         }
         usage();
-        String wsUrl = "ws://"+hostnameAndPort+"/ws-endpoint";
-        String restUrl = "http://"+hostnameAndPort+"/alert";
-        BtcStompSessionHandler sessionHandler = conectToBitcoinWebsocketServer(wsUrl);
+        String wsUrl = "ws://" + hostnameAndPort + "/ws-endpoint";
+        String restUrl = "http://" + hostnameAndPort + "/alert";
+        BtcStompSessionHandler sessionHandler = connectToBitcoinWebsocketServer(wsUrl);
         LOG.info("Ready to set/remove alerts...");
         Scanner scanner = new Scanner(System.in);
         RestTemplate restTemplate = new RestTemplate();
         List<String> alerts = new ArrayList<>();
-        while (true){
+        while (true) {
             String command = scanner.next();
-            if (command.equals("exit")){
+            if (command.equals("exit")) {
                 System.exit(0);
             }
-            if (command.equals("alerts")){
+            if (command.equals("alerts")) {
                 showActiveAlerts(alerts);
                 continue;
             }
-            try{
+            if (command.equals("usage")) {
+                usage();
+                continue;
+            }
+            try {
                 handleCommand(command, sessionHandler, restTemplate, restUrl, alerts);
-            }catch (IllegalArgumentException e){
-                LOG.error(e.getMessage());
+            } catch (IllegalArgumentException e) {
+                LOG.error(e.getMessage(), e);
                 continue;
             }
 
@@ -91,11 +96,12 @@ public class BitcoinServiceClient {
                         restUrl + "?pair={pair}&limit={limit}&principal={principal}",
                         alert);
                 break;
-            default: throw new IllegalArgumentException("Wrong alert format");
+            default:
+                throw new IllegalArgumentException("Wrong alert format");
         }
     }
 
-    private static BtcStompSessionHandler conectToBitcoinWebsocketServer(String url) {
+    private static BtcStompSessionHandler connectToBitcoinWebsocketServer(String url) {
         WebSocketClient webSocketClient = new StandardWebSocketClient();
         WebSocketStompClient stompClient = new WebSocketStompClient(webSocketClient);
         stompClient.setMessageConverter(new StringMessageConverter());

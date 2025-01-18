@@ -31,20 +31,22 @@ public class BitcoinCheckerTest {
 
     @Mock
     private TickerProvider tickerProvider;
+
     @Mock
     private ClientAlerts clientAlerts;
+
     @Mock
     private SimpMessagingTemplate messagingTemplate;
 
-    private LocalDateTime dateTime = LocalDateTime.now();
+    private final LocalDateTime dateTime = LocalDateTime.now();
 
-    BitcoinChecker bitcoinChecker;
+    private BitcoinChecker bitcoinChecker;
 
     @Before
     public void init(){
         bitcoinChecker = new BitcoinChecker(clientAlerts, tickerProvider, messagingTemplate){
             @Override
-            LocalDateTime getTimeStamp() {
+            public LocalDateTime getTimeStamp() {
                 return dateTime;
             }
         };
@@ -59,8 +61,8 @@ public class BitcoinCheckerTest {
     }
 
     @Test
-    public void getBitcLastPriceShouldBeScheduled() throws NoSuchMethodException {
-        Method getBitcLastPriceMethod = BitcoinChecker.class.getMethod("getBitcLastPrice");
+    public void getBitcoinLastPriceShouldBeScheduled() throws NoSuchMethodException {
+        Method getBitcLastPriceMethod = BitcoinChecker.class.getMethod("getBitcoinLastPrice");
         Scheduled scheduledAnnotation = getBitcLastPriceMethod.getAnnotation(Scheduled.class);
         assertNotNull(scheduledAnnotation);
         assertEquals(8000, scheduledAnnotation.fixedRate());
@@ -68,25 +70,25 @@ public class BitcoinCheckerTest {
     }
 
     @Test
-    public void getBitcLastPriceShouldCheckPriceForEachAlertAndSendNotification(){
-        BigDecimal btcUsdlasPrice = BigDecimal.valueOf(3000);
+    public void getBitcoinLastPriceShouldCheckPriceForEachAlertAndSendNotification(){
+        BigDecimal btcUsdLastPrice = BigDecimal.valueOf(3000);
         List<Alert> alerts = getTestAlerts();
         when(clientAlerts.getAlerts(bitcoinChecker.getPrincipalName())).thenReturn(alerts);
         alerts.forEach(alert -> {
             try {
                 Ticker ticker = new Ticker.Builder().
                         currencyPair(alert.getPair()).
-                        last(btcUsdlasPrice).
+                        last(btcUsdLastPrice).
                         build();
                 when(tickerProvider.getTicker(alert.getPair())).thenReturn(ticker);
             } catch (IOException e) {
                 fail();
             }
         });
-        bitcoinChecker.getBitcLastPrice();
+        bitcoinChecker.getBitcoinLastPrice();
 
         alerts.forEach( alert -> {
-            if (btcUsdlasPrice.compareTo(BigDecimal.valueOf(alert.getLimit())) == 1){
+            if (btcUsdLastPrice.compareTo(BigDecimal.valueOf(alert.getLimit())) == 1){
                 verify(messagingTemplate).convertAndSendToUser(
                         bitcoinChecker.getPrincipalName(),
                         "/alerts",

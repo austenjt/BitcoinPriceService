@@ -27,12 +27,11 @@ public class BitcoinChecker {
     private static final int PRICE_CHECK_INTERVAL_SEC = 8000;
     private static final int INITIAL_DELAY = 2000;
 
-    private TickerProvider tickerProvider;
-    private ClientAlerts clientAlerts;
-    private SimpMessagingTemplate template;
+    private final TickerProvider tickerProvider;
+    private final ClientAlerts clientAlerts;
+    private final SimpMessagingTemplate template;
 
     private String principalName = "";
-
 
     @Autowired
     public BitcoinChecker(ClientAlerts clientAlerts,
@@ -53,25 +52,24 @@ public class BitcoinChecker {
 
 
     @PostConstruct
-    public void init(){
+    public void init() {
         LOG.info("New session created. BitcoinChecker instance " + this.toString() + " created.");
-
     }
 
     @PreDestroy
-    public void destroy(){
+    public void destroy() {
         LOG.info("Session closed. BitcoinChecker instance for principal " + this.principalName + " will be destroyed.");
         clientAlerts.removeAlerts(principalName);
     }
 
     @Scheduled(fixedRate = PRICE_CHECK_INTERVAL_SEC, initialDelay = INITIAL_DELAY)
-    public void getBitcLastPrice() {
+    public void getBitcoinLastPrice() {
         List<Alert> alerts = clientAlerts.getAlerts(principalName);
         alerts.forEach(alert -> {
             try {
                 checkPriceAndSendNotification(alert);
             } catch (IOException e) {
-                LOG.error("Error during sending price alert to the client principal: " + principalName);
+                LOG.error("Error during sending price alert to the client principal: " + principalName, e);
             }
         });
     }
@@ -88,7 +86,8 @@ public class BitcoinChecker {
         }
     }
 
-    LocalDateTime getTimeStamp() {
+    public LocalDateTime getTimeStamp() {
         return LocalDateTime.now();
     }
+
 }

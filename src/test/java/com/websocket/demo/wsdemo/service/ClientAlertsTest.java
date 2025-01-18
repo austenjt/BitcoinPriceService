@@ -26,12 +26,12 @@ public class ClientAlertsTest {
 
     @Test
     public void addAlertShouldAddNewAlertIfPrincipalAlreadyExist() throws Exception {
-        clientAlerts.addAlert("principal1", new Alert("BTC_USD", 3000));
-        clientAlerts.addAlert("principal1", new Alert("BTC_EUR", 2500));
+        clientAlerts.addAlert("principal1", new Alert("BTC_USD", 103000));
+        clientAlerts.addAlert("principal1", new Alert("BTC_EUR", 102500));
         List<Alert> principal1Alerts = clientAlerts.getAlerts("principal1");
         assertEquals(2, principal1Alerts.size());
-        assertEquals(new Alert("BTC_USD", 3000), principal1Alerts.get(0));
-        assertEquals(new Alert("BTC_EUR", 2500), principal1Alerts.get(1));
+        assertEquals(new Alert("BTC_USD", 103000), principal1Alerts.get(0));
+        assertEquals(new Alert("BTC_EUR", 102500), principal1Alerts.get(1));
     }
 
     @Test
