@@ -1,5 +1,6 @@
 package com.websocket.demo.wsdemo.model;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -8,6 +9,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@Slf4j
 @ExtendWith(MockitoExtension.class)
 public class AlertTest {
 

@@ -1,0 +1,343 @@
+%PARSER_ERROR[d] [%PARSER_ERROR[thread]] %PARSER_ERROR[level] %PARSER_ERROR[logger] - %PARSER_ERROR[msg]%PARSER_ERROR[n]%PARSER_ERROR[d] [%PARSER_ERROR[thread]] %PARSER_ERROR[level] %PARSER_ERROR[logger] - %PARSER_ERROR[msg]%PARSER_ERROR[n]%PARSER_ERROR[d] [%PARSER_ERROR[thread]] %PARSER_ERROR[level] %PARSER_ERROR[logger] - %PARSER_ERROR[msg]%PARSER_ERROR[n]java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [d]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [d] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [thread]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [thread] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [level]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [level] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [logger]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [logger] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [msg]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [msg] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [n]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [n] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [d]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [d] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [thread]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [thread] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [level]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [level] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [logger]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [logger] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [msg]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [msg] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [n]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [n] is not a valid conversion word
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:353)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:160)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$12(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$7(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$6(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$1(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [d]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [d] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [thread]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [thread] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [level]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [level] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [logger]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [logger] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [msg]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [msg] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [n]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [n] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [d]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [d] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [thread]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [thread] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [level]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [level] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [logger]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [logger] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [msg]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [msg] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [n]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [n] is not a valid conversion word
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reportConfigurationErrorsIfNecessary(LogbackLoggingSystem.java:291)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:269)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:344)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:74)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:61)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:197)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:332)
+	... 100 common frames omitted
+%PARSER_ERROR[d] [%PARSER_ERROR[thread]] %PARSER_ERROR[level] %PARSER_ERROR[logger] - %PARSER_ERROR[msg]%PARSER_ERROR[n]java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@5395ea39 testClass = com.websocket.demo.wsdemo.BitcoinServiceApplicationTests, locations = [], classes = [com.websocket.demo.wsdemo.BitcoinServiceApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@33b1c5c5, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6ee660fb, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@56113384, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@53d102a2, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@5aac4250, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@70a36a66, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@1d295b28], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:160)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$12(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$7(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$6(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$1(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [d]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [d] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [thread]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [thread] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [level]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [level] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [logger]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [logger] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [msg]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [msg] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [n]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [n] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [d]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [d] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [thread]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [thread] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [level]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [level] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [logger]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [logger] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [msg]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [msg] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [n]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [n] is not a valid conversion word
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:353)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 75 common frames omitted
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [d]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [d] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [thread]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [thread] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [level]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [level] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [logger]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [logger] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [msg]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [msg] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - There is no conversion class registered for conversion word [n]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4d7e7435 - [n] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [d]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [d] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [thread]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [thread] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [level]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [level] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [logger]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [logger] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [msg]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [msg] is not a valid conversion word
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - There is no conversion class registered for conversion word [n]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@4a1e3ac1 - [n] is not a valid conversion word
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reportConfigurationErrorsIfNecessary(LogbackLoggingSystem.java:291)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:269)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:344)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:74)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:61)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:197)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:332)
+	... 100 common frames omitted
+%PARSER_ERROR[d] [%PARSER_ERROR[thread]] %PARSER_ERROR[level] %PARSER_ERROR[logger] - %PARSER_ERROR[msg]%PARSER_ERROR[n]%PARSER_ERROR[d] [%PARSER_ERROR[thread]] %PARSER_ERROR[level] %PARSER_ERROR[logger] - %PARSER_ERROR[msg]%PARSER_ERROR[n]%PARSER_ERROR[d] [%PARSER_ERROR[thread]] %PARSER_ERROR[level] %PARSER_ERROR[logger] - %PARSER_ERROR[msg]%PARSER_ERROR[n]%PARSER_ERROR[d] [%PARSER_ERROR[thread]] %PARSER_ERROR[level] %PARSER_ERROR[logger] - %PARSER_ERROR[msg]%PARSER_ERROR[n]%PARSER_ERROR[d] [%PARSER_ERROR[thread]] %PARSER_ERROR[level] %PARSER_ERROR[logger] - %PARSER_ERROR[msg]%PARSER_ERROR[n]%PARSER_ERROR[d] [%PARSER_ERROR[thread]] %PARSER_ERROR[level] %PARSER_ERROR[logger] - %PARSER_ERROR[msg]%PARSER_ERROR[n]%PARSER_ERROR[d] [%PARSER_ERROR[thread]] %PARSER_ERROR[level] %PARSER_ERROR[logger] - %PARSER_ERROR[msg]%PARSER_ERROR[n]%PARSER_ERROR[d] [%PARSER_ERROR[thread]] %PARSER_ERROR[level] %PARSER_ERROR[logger] - %PARSER_ERROR[msg]%PARSER_ERROR[n]%PARSER_ERROR[d] [%PARSER_ERROR[thread]] %PARSER_ERROR[level] %PARSER_ERROR[logger] - %PARSER_ERROR[msg]%PARSER_ERROR[n]%PARSER_ERROR[d] [%PARSER_ERROR[thread]] %PARSER_ERROR[level] %PARSER_ERROR[logger] - %PARSER_ERROR[msg]%PARSER_ERROR[n]2025-01-17 17:46:54 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.websocket.demo.wsdemo.BitcoinServiceApplicationTests]: BitcoinServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-01-17 17:46:54 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.websocket.demo.wsdemo.BitcoinServiceApplication for test class com.websocket.demo.wsdemo.BitcoinServiceApplicationTests
+2025-01-17 17:46:54 [main] INFO  c.w.d.w.BitcoinServiceApplicationTests - Starting BitcoinServiceApplicationTests using Java 21.0.5 with PID 38804 (started by austenjt in C:\Users\austenjt\IdeaProjects\BitcoinPriceService)
+2025-01-17 17:46:54 [main] INFO  c.w.d.w.BitcoinServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-01-17 17:46:55 [main] INFO  o.k.x.bitstamp.BitstampExchange - Calling Remote Init...
+2025-01-17 17:46:57 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-01-17 17:46:57 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@349f3ff7]]
+2025-01-17 17:46:57 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-01-17 17:46:57 [main] INFO  c.w.d.w.BitcoinServiceApplicationTests - Started BitcoinServiceApplicationTests in 2.835 seconds (process running for 3.77)
+2025-01-17 17:46:58 [main] INFO  c.w.d.w.c.BitcoinServiceController - /alerts called. message received from client. Principal: principalName
+2025-01-17 17:46:58 [main] INFO  c.w.d.w.c.BitcoinServiceController - PUT /alert params: pair: BTC_USD limit: 3000 principal: principalName
+2025-01-17 17:46:58 [main] INFO  c.w.d.w.c.BitcoinServiceController - DELETE /alert params: pair: BTC_USD limit: 3000 principal: principalName
+2025-01-17 17:46:59 [main] INFO  c.w.d.wsdemo.service.BitcoinChecker - BTC/USD price: 3000
+2025-01-17 17:46:59 [main] INFO  c.w.d.wsdemo.service.BitcoinChecker - sending BTC/USD limit: 2000 to user: principalName
+2025-01-17 17:46:59 [main] INFO  c.w.d.wsdemo.service.BitcoinChecker - BTC/EUR price: 3000
+2025-01-17 17:46:59 [main] INFO  c.w.d.wsdemo.service.BitcoinChecker - sending BTC/EUR limit: 2999 to user: principalName
+2025-01-17 17:46:59 [main] INFO  c.w.d.wsdemo.service.BitcoinChecker - BTC/USD price: 3000
+2025-01-17 17:46:59 [main] INFO  c.w.d.wsdemo.service.BitcoinChecker - Session closed. BitcoinChecker instance for principal principalName will be destroyed.
+2025-01-17 17:46:59 [main] INFO  o.k.x.bitstamp.BitstampExchange - Calling Remote Init...
+2025-01-17 17:46:59 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-01-17 17:46:59 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@349f3ff7]]
+2025-01-17 17:46:59 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.

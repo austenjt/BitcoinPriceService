@@ -1,7 +1,6 @@
 package com.websocket.demo.wsdemo.client;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.lang.Nullable;
 import org.springframework.messaging.simp.stomp.StompFrameHandler;
 import org.springframework.messaging.simp.stomp.StompHeaders;
@@ -10,9 +9,8 @@ import org.springframework.messaging.simp.stomp.StompSessionHandlerAdapter;
 
 import java.lang.reflect.Type;
 
+@Slf4j
 public class BtcStompSessionHandler extends StompSessionHandlerAdapter {
-
-    private static final Logger LOG = LoggerFactory.getLogger(BtcStompSessionHandler.class);
 
     private String principal;
 
@@ -28,7 +26,7 @@ public class BtcStompSessionHandler extends StompSessionHandlerAdapter {
             @Override
             public void handleFrame(StompHeaders stompHeaders, @Nullable Object o) {
                 // print received message from server
-                LOG.info("message from /user/alerts/hello: " + o.toString());
+                log.info("message from /user/alerts/hello: " + o.toString());
                 principal = o.toString();
             }
         });
@@ -42,12 +40,12 @@ public class BtcStompSessionHandler extends StompSessionHandlerAdapter {
             @Override
             public void handleFrame(StompHeaders stompHeaders, @Nullable Object o) {
                 // print received message from server
-                LOG.info("message from /user/alerts: " + o.toString());
+                log.info("message from /user/alerts: " + o.toString());
             }
         });
 
         // send hello message to initiate session scoped BitcoinChecker instance on the server
-        LOG.info("sending hello to /app/alerts");
+        log.info("sending hello to /app/alerts");
         session.send("/app/hello", "hello");
     }
 
@@ -58,4 +56,5 @@ public class BtcStompSessionHandler extends StompSessionHandlerAdapter {
     public void setPrincipal(String principal) {
         this.principal = principal;
     }
+
 }

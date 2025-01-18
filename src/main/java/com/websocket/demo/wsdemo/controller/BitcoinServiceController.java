@@ -3,8 +3,7 @@ package com.websocket.demo.wsdemo.controller;
 import com.websocket.demo.wsdemo.model.Alert;
 import com.websocket.demo.wsdemo.service.BitcoinChecker;
 import com.websocket.demo.wsdemo.service.ClientAlerts;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.annotation.SendToUser;
@@ -15,10 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
 
+@Slf4j
 @RestController
 public class BitcoinServiceController {
-
-    private static final Logger LOG = LoggerFactory.getLogger(BitcoinServiceController.class);
 
     private BitcoinChecker bitcoinChecker;
     private ClientAlerts clientAlerts;
@@ -33,7 +31,7 @@ public class BitcoinServiceController {
     @SendToUser("/alerts/hello")
     public String hello(String message, Principal principal) {
         String principalName = principal.getName();
-        LOG.info("/alerts called. " + message + " received from client. Principal: " + principalName);
+        log.info("/alerts called. " + message + " received from client. Principal: " + principalName);
         bitcoinChecker.setPrincipalName(principalName);
         return principalName;
     }
@@ -42,7 +40,7 @@ public class BitcoinServiceController {
     public void putAlert(@RequestParam("pair") String pair,
                          @RequestParam("limit") String limit,
                          @RequestParam("principal") String principal) {
-        LOG.info("PUT /alert params: pair: " + pair +
+        log.info("PUT /alert params: pair: " + pair +
                 " limit: " + limit +
                 " principal: " + principal);
         clientAlerts.addAlert(principal, new Alert(pair, Integer.parseInt(limit)));
@@ -52,7 +50,7 @@ public class BitcoinServiceController {
     public void deleteAlert(@RequestParam("pair") String pair,
                             @RequestParam("limit") String limit,
                             @RequestParam("principal") String principal) {
-        LOG.info("DELETE /alert params: pair: " + pair +
+        log.info("DELETE /alert params: pair: " + pair +
                 " limit: " + limit +
                 " principal: " + principal);
         clientAlerts.removeAlert(principal, new Alert(pair, Integer.parseInt(limit)));

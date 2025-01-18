@@ -1,7 +1,6 @@
 package com.websocket.demo.wsdemo.client;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.messaging.converter.StringMessageConverter;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 import org.springframework.web.client.RestTemplate;
@@ -11,15 +10,14 @@ import org.springframework.web.socket.messaging.WebSocketStompClient;
 
 import java.util.*;
 
+@Slf4j
 public class BitcoinServiceClient {
-
-    private static final Logger LOG = LoggerFactory.getLogger(BitcoinServiceClient.class);
 
     public static void main(String[] args) {
         String hostnameAndPort;
         String localhost8080 = "localhost:8080";
         if (args.length == 0) {
-            LOG.info("No hostname:port provided to the client. Using " + localhost8080);
+            log.info("No hostname:port provided to the client. Using " + localhost8080);
             hostnameAndPort = localhost8080;
         } else {
             hostnameAndPort = args[0];
@@ -28,7 +26,7 @@ public class BitcoinServiceClient {
         String wsUrl = "ws://" + hostnameAndPort + "/ws-endpoint";
         String restUrl = "http://" + hostnameAndPort + "/alert";
         BtcStompSessionHandler sessionHandler = connectToBitcoinWebsocketServer(wsUrl);
-        LOG.info("Ready to set/remove alerts...");
+        log.info("Ready to set/remove alerts...");
         Scanner scanner = new Scanner(System.in);
         RestTemplate restTemplate = new RestTemplate();
         List<String> alerts = new ArrayList<>();
@@ -48,7 +46,7 @@ public class BitcoinServiceClient {
             try {
                 handleCommand(command, sessionHandler, restTemplate, restUrl, alerts);
             } catch (IllegalArgumentException e) {
-                LOG.error(e.getMessage(), e);
+                log.error(e.getMessage(), e);
                 continue;
             }
 
@@ -57,15 +55,15 @@ public class BitcoinServiceClient {
     }
 
     private static void showActiveAlerts(List<String> alerts) {
-        LOG.info("Active alerts: " + alerts.toString());
+        log.info("Active alerts: " + alerts.toString());
     }
 
     private static void usage() {
-        LOG.info("Usage: BitcoinServiceClient [hostname:port]");
-        LOG.info("Setting/Removing price alerts: [PUT|DELETE]:[CCY]_[CCY]:[limit]");
-        LOG.info("Example for alert set: PUT:BTC_USD:3000");
-        LOG.info("Example for alert remove: DELETE:BTC_USD:3000");
-        LOG.info("Type exit to close the client");
+        log.info("Usage: BitcoinServiceClient [hostname:port]");
+        log.info("Setting/Removing price alerts: [PUT|DELETE]:[CCY]_[CCY]:[limit]");
+        log.info("Example for alert set: PUT:BTC_USD:3000");
+        log.info("Example for alert remove: DELETE:BTC_USD:3000");
+        log.info("Type exit to close the client");
     }
 
     private static void handleCommand(String command, BtcStompSessionHandler sessionHandler,

@@ -18,4 +18,5 @@ public class TestTickerProvider implements TickerProvider {
     public Ticker getTicker(CurrencyPair currencyPair) throws IOException {
         return new Ticker.Builder().last(TEST_PRICE).currencyPair(currencyPair).build();
     }
+
 }

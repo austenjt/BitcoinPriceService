@@ -23,4 +23,5 @@ public class OnlineTickerProvider implements TickerProvider{
     public Ticker getTicker(CurrencyPair currencyPair) throws IOException {
         return marketDataServiceProvider.getMarketDataService().getTicker(currencyPair);
     }
+
 }

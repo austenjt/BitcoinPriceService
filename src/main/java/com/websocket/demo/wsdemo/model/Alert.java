@@ -4,6 +4,7 @@ import org.knowm.xchange.currency.Currency;
 import org.knowm.xchange.currency.CurrencyPair;
 
 public class Alert {
+
     public static final String CURRENCY_SEPARATOR = "_";
 
     private CurrencyPair pair;
@@ -11,7 +12,7 @@ public class Alert {
 
     public Alert(String pair, int limit) {
         String[] currencies = pair.split(CURRENCY_SEPARATOR);
-        if (currencies.length != 2){
+        if (currencies.length != 2) {
             throw new IllegalArgumentException("Wrong Currency Pair format, ex: BTC_USD");
         }
         this.pair = new CurrencyPair(Currency.getInstance(currencies[0]),
@@ -52,4 +53,5 @@ public class Alert {
         result = 31 * result + getLimit();
         return result;
     }
+
 }
