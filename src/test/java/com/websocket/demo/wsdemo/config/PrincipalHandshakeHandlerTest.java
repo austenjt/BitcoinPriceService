@@ -1,22 +1,25 @@
 package com.websocket.demo.wsdemo.config;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.web.socket.WebSocketHandler;
 
 import java.security.Principal;
 import java.util.*;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@ExtendWith(MockitoExtension.class)
 public class PrincipalHandshakeHandlerTest {
 
     PrincipalHandshakeHandler handshakeHandler;
 
-    @Before
+    @BeforeEach
     public void init(){
         handshakeHandler = new PrincipalHandshakeHandler();
     }

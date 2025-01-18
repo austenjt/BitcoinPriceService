@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.3.RELEASE</version>
+		<version>3.4.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.websocket.demo</groupId>
@@ -16,18 +16,21 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<xchange.version>4.3.16</xchange.version>
+		<xchange.version>5.2.1</xchange.version>
 	</properties>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-rest</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-websocket</artifactId>
@@ -44,11 +47,13 @@
 			<artifactId>xchange-core</artifactId>
 			<version>${xchange.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.knowm.xchange</groupId>
 			<artifactId>xchange-bitstamp</artifactId>
 			<version>${xchange.version}</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>

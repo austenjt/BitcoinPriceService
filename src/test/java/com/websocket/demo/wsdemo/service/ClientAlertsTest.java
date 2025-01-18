@@ -1,17 +1,20 @@
 package com.websocket.demo.wsdemo.service;
 
 import com.websocket.demo.wsdemo.model.Alert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
+@ExtendWith(MockitoExtension.class)
 public class ClientAlertsTest {
     ClientAlerts clientAlerts;
 
-    @Before
+    @BeforeEach
     public void init(){
         clientAlerts = new ClientAlerts();
     }
@@ -66,7 +69,7 @@ public class ClientAlertsTest {
     public void getAlertsShouldReturnAlertsForGivenPrincipalOrEmptyList() throws Exception {
         clientAlerts.addAlert("principal1", new Alert("BTC_USD", 3000));
         clientAlerts.addAlert("principal1", new Alert("BTC_EUR", 2500));
-        assertTrue(!clientAlerts.getAlerts("principal1").isEmpty());
+        assertFalse(clientAlerts.getAlerts("principal1").isEmpty());
         assertTrue(clientAlerts.getAlerts("principal2").isEmpty());
     }
 

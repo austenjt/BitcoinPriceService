@@ -2,8 +2,8 @@ package com.websocket.demo.wsdemo.client;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.task.TaskSchedulerBuilder;
 import org.springframework.messaging.converter.StringMessageConverter;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.socket.client.WebSocketClient;
 import org.springframework.web.socket.client.standard.StandardWebSocketClient;
@@ -105,9 +105,13 @@ public class BitcoinServiceClient {
         WebSocketClient webSocketClient = new StandardWebSocketClient();
         WebSocketStompClient stompClient = new WebSocketStompClient(webSocketClient);
         stompClient.setMessageConverter(new StringMessageConverter());
-        stompClient.setTaskScheduler(new TaskSchedulerBuilder().build());
+        ThreadPoolTaskScheduler taskScheduler = new ThreadPoolTaskScheduler();
+        taskScheduler.setPoolSize(1);
+        taskScheduler.initialize();
+        stompClient.setTaskScheduler(taskScheduler);
         BtcStompSessionHandler sessionHandler = new BtcStompSessionHandler();
-        stompClient.connect(url, sessionHandler);
+        stompClient.connectAsync(url, sessionHandler);
         return sessionHandler;
     }
+
 }

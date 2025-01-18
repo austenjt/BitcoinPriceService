@@ -3,13 +3,12 @@ package com.websocket.demo.wsdemo.controller;
 import com.websocket.demo.wsdemo.model.Alert;
 import com.websocket.demo.wsdemo.service.BitcoinChecker;
 import com.websocket.demo.wsdemo.service.ClientAlerts;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.annotation.SendToUser;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,13 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.lang.reflect.Method;
 import java.security.Principal;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class BitcoinServiceControllerTest {
 
     @Mock
@@ -36,7 +36,6 @@ public class BitcoinServiceControllerTest {
 
     @InjectMocks
     BitcoinServiceController controller;
-
 
     @Test
     public void checkControllerAnnotations(){

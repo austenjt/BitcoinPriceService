@@ -1,12 +1,12 @@
 package com.websocket.demo.wsdemo.service;
 
 import com.websocket.demo.wsdemo.model.Alert;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.knowm.xchange.dto.marketdata.Ticker;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.context.annotation.Scope;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -18,15 +18,13 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class BitcoinCheckerTest {
 
     @Mock
@@ -42,7 +40,7 @@ public class BitcoinCheckerTest {
 
     private BitcoinChecker bitcoinChecker;
 
-    @Before
+    @BeforeEach
     public void init(){
         bitcoinChecker = new BitcoinChecker(clientAlerts, tickerProvider, messagingTemplate){
             @Override
